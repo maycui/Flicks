@@ -20,6 +20,7 @@ public class Movie {
     String releaseDate;
     String pop;
     Integer id;
+    String imageUrl;
 
     public Movie() {}
 
@@ -34,6 +35,11 @@ public class Movie {
         releaseDate = o.getString("release_date");
         pop = o.getString("popularity");
         id = o.getInt("id");
+        imageUrl = null;
+    }
+
+    public void setImageurl(String url) {
+        imageUrl = url;
     }
 
     public String getTitle() {
@@ -70,5 +76,9 @@ public class Movie {
 
     public Integer getId() {
         return id;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
     }
 }

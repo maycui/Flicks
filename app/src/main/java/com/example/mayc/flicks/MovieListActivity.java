@@ -31,11 +31,6 @@ public class MovieListActivity extends AppCompatActivity {
     public final static String TAG = "MovieListActivity";
 
     AsyncHttpClient client;
-    // the base url for loading images
-    String imageBaseURl;
-    // poster size
-    String posterSize;
-    // the list of currently playing movies
     ArrayList<Movie> movies;
     RecyclerView  rvMovies;
     //the adapter wired to the recycler view
@@ -60,7 +55,6 @@ public class MovieListActivity extends AppCompatActivity {
         rvMovies.setAdapter(adapter);
         // call get the configuration method
         getConfiguration();
-
     }
 
     // get the list of currently playing movies from the API
@@ -109,25 +103,20 @@ public class MovieListActivity extends AppCompatActivity {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 try {
                     config = new Config(response);
-
                     Log.i(TAG, String.format("Loaded configuration with imageBaseUrl %s and posterSize %s",
                                         config.getImageBaseURl(),
                                         config.getPosterSize()));
-
                     adapter.setConfig(config);
-
                     // get the now playing movie list
                     getNowPlaying();
                 } catch (JSONException e)  {
                     logError("Failed parsing configuration", e, true);
                 }
             }
-
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
                 logError("Failed getting configuration", throwable, true);
             }
-
         });
     }
 

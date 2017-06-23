@@ -73,8 +73,10 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         // if in portrait mode, load the poster image
         if (isPortrait) {
             imageUrl = config.getImageUrl(config.getPosterSize(), movie.getPosterPath());
+            movie.setImageurl(config.getImageUrl(config.getBackdropSize(), movie.getBackdropPath()));
         } else {
             imageUrl = config.getImageUrl(config.getBackdropSize(), movie.getBackdropPath());
+            movie.setImageurl(imageUrl);
         }
 
         // get the correct placeholder using a ternary expression
