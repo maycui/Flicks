@@ -1,144 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/grey"
-    tools:context="com.example.mayc.flicks.MovieDetailsActivity">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background= "@color/grey">
 
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        tools:context="com.example.mayc.flicks.MovieDetailsActivity">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:textColor="@color/white"
+            android:layout_below="@+id/videoPreview"
+            android:layout_alignLeft="@+id/videoPreview"
+            android:layout_alignStart="@+id/videoPreview" />
+
+        <RatingBar
+            android:id="@+id/rbVoteAverage"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:theme="@style/RatingBar"
+            android:stepSize="0.5"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="34dp"
+            android:layout_below="@+id/tvTitle"
+            android:layout_alignLeft="@+id/tvTitle"
+            android:layout_alignStart="@+id/tvTitle" />
+
+        <TextView
+            android:id="@+id/tvOverview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="50dp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/voteCount"
+            android:layout_alignLeft="@+id/voteCount"
+            android:layout_alignStart="@+id/voteCount" />
+
+        <TextView
+            android:id="@+id/voteCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            android:layout_alignBaseline="@+id/count"
+            android:layout_alignBottom="@+id/count"
+            android:layout_alignLeft="@+id/rbVoteAverage"
+            android:layout_alignStart="@+id/rbVoteAverage" />
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Votes"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            android:layout_below="@+id/rbVoteAverage"
+            android:layout_toRightOf="@+id/voteCount"
+            android:layout_toEndOf="@+id/voteCount" />
 
     <TextView
-        android:id="@+id/tvTitle"
-        android:layout_marginLeft="5dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textAppearance="@android:style/TextAppearance.Large"
-        android:textColor="@color/white"
-        android:layout_below="@+id/videoPreview"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+            android:id="@+id/releaseDate"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textColor="@color/white"
+            android:layout_alignBaseline="@+id/release"
+            android:layout_alignBottom="@+id/release"
+            android:layout_toRightOf="@+id/release"
+            android:layout_toEndOf="@+id/release" />
 
-    <RatingBar
-        android:id="@+id/rbVoteAverage"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        style="@style/Widget.AppCompat.RatingBar.Small"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:numStars="5"
-        android:theme="@style/RatingBar"
-        android:stepSize="0.5"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="34dp"
-        android:layout_below="@+id/tvTitle"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        <TextView
+            android:id="@+id/release"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Release Date: "
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textColor="@color/white"
+            android:layout_below="@+id/popularity"
+            android:layout_alignLeft="@+id/popularity"
+            android:layout_alignStart="@+id/popularity" />
 
-    <TextView
-        android:id="@+id/tvOverview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="50dp"
-        android:textColor="@color/white"
-        android:layout_below="@+id/voteCount"
-        android:layout_alignLeft="@+id/voteCount"
-        android:layout_alignStart="@+id/voteCount" />
+        <TextView
+            android:id="@+id/popularity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Popularity: "
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_below="@+id/tvOverview"
+            android:layout_alignLeft="@+id/tvOverview"
+            android:layout_alignStart="@+id/tvOverview" />
 
-    <TextView
-        android:id="@+id/voteCount"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/rbVoteAverage"
-        android:text="TextView"
-        android:textColor="@color/white"
-        android:textStyle="italic" />
+        <TextView
+            android:id="@+id/pop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="TextView"
+            android:textSize="15sp"
+            android:layout_alignBaseline="@+id/popularity"
+            android:layout_alignBottom="@+id/popularity"
+            android:layout_toRightOf="@+id/popularity"
+            android:layout_toEndOf="@+id/popularity" />
 
-    <TextView
-        android:id="@+id/count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" Votes"
-        android:textColor="@color/white"
-        android:textStyle="italic"
-        android:layout_below="@+id/rbVoteAverage"
-        android:layout_toRightOf="@+id/voteCount"
-        android:layout_toEndOf="@+id/voteCount" />
+        <ImageView
+            android:id="@+id/videoPreview"
+            android:layout_width="480dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/flicks_backdrop_placeholder"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:id="@+id/releaseDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textAppearance="@android:style/TextAppearance.Medium"
-        android:textColor="@color/white"
-        android:layout_alignBaseline="@+id/release"
-        android:layout_alignBottom="@+id/release"
-        android:layout_toRightOf="@+id/release"
-        android:layout_toEndOf="@+id/release" />
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/bigplay"
+            android:layout_marginBottom="60dp"
+            android:layout_alignBottom="@+id/videoPreview"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
 
-    <TextView
-        android:id="@+id/release"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Release Date: "
-        android:textAppearance="@android:style/TextAppearance.Medium"
-        android:textColor="@color/white"
-        android:layout_below="@+id/popularity"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+</ScrollView>
 
-    <TextView
-        android:id="@+id/popularity"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/tvOverview"
-        android:text="Popularity: "
-        android:textColor="@color/white"
-        android:textSize="15sp" />
-
-    <TextView
-        android:id="@+id/pop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:text="TextView"
-        android:textSize="15sp"
-        android:layout_alignBaseline="@+id/popularity"
-        android:layout_alignBottom="@+id/popularity"
-        android:layout_toRightOf="@+id/popularity"
-        android:layout_toEndOf="@+id/popularity" />
-
-    <ImageView
-        android:id="@+id/videoPreview"
-        android:layout_width="480dp"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        app:srcCompat="@drawable/flicks_backdrop_placeholder"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
-        app:srcCompat="@drawable/bigplay"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-</RelativeLayout>
