@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/videoPreview"
+        android:layout_width="480dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/flicks_backdrop_placeholder" />
+
+    <ImageView
+        android:id="@+id/playButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="221dp"
+        android:layout_marginStart="221dp"
+        android:layout_marginTop="114dp"
+        app:srcCompat="@drawable/bigplay" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/videoPreview"
+        android:layout_toRightOf="@+id/videoPreview"
+        android:text="TextView" />
+
+    <RatingBar
+        android:id="@+id/rbVoteAverage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:layout_toEndOf="@+id/videoPreview"
+        android:layout_toRightOf="@+id/videoPreview" />
+
+    <TextView
+        android:id="@+id/voteCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rbVoteAverage"
+        android:layout_toEndOf="@+id/videoPreview"
+        android:layout_toRightOf="@+id/videoPreview"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/votes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rbVoteAverage"
+        android:layout_toEndOf="@+id/voteCount"
+        android:layout_toRightOf="@+id/voteCount"
+        android:text=" Votes" />
+
+    <TextView
+        android:id="@+id/tvOverview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/voteCount"
+        android:layout_toEndOf="@+id/videoPreview"
+        android:layout_toRightOf="@+id/videoPreview"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/popularity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvOverview"
+        android:layout_toEndOf="@+id/videoPreview"
+        android:layout_toRightOf="@+id/videoPreview"
+        android:text="Popularity: "
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/pop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/popularity"
+        android:layout_toEndOf="@+id/popularity"
+        android:layout_toRightOf="@+id/popularity"
+        android:text="TextView" />
+
+</RelativeLayout>
