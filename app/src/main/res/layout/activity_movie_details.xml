@@ -15,7 +15,9 @@
         android:text="TextView"
         android:textAppearance="@android:style/TextAppearance.Large"
         android:textColor="@color/white"
-        android:layout_marginTop="15dp"/>
+        android:layout_below="@+id/videoPreview"
+        android:layout_alignRight="@+id/count"
+        android:layout_alignEnd="@+id/count" />
 
     <RatingBar
         android:id="@+id/rbVoteAverage"
@@ -84,11 +86,44 @@
         android:id="@+id/release"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Release Date: "
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:textColor="@color/white"
+        android:layout_below="@+id/popularity"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/popularity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/tvOverview"
-        android:layout_marginTop="15dp"
-        android:text="Release Date: "
-        android:textAppearance="@android:style/TextAppearance.Medium"
-        android:textColor="@color/white" />
+        android:text="Popularity: "
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/pop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvOverview"
+        android:layout_toEndOf="@+id/popularity"
+        android:layout_toRightOf="@+id/popularity"
+        android:textColor="@color/white"
+        android:text="TextView"
+        android:textSize="15sp" />
+
+    <ImageButton
+        android:id="@+id/videoPreview"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_alignLeft="@+id/tvTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/tvTitle"
+        app:srcCompat="@android:color/black" />
+
 </RelativeLayout>

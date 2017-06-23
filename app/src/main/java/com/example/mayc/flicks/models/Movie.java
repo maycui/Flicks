@@ -18,6 +18,8 @@ public class Movie {
     Double voteAverage;
     String voteCount;
     String releaseDate;
+    String pop;
+    Integer id;
 
     public Movie() {}
 
@@ -30,6 +32,8 @@ public class Movie {
         voteAverage = o.getDouble("vote_average");
         voteCount = o.getString("vote_count");
         releaseDate = o.getString("release_date");
+        pop = o.getString("popularity");
+        id = o.getInt("id");
     }
 
     public String getTitle() {
@@ -58,5 +62,13 @@ public class Movie {
 
     public String getReleaseDate() {
         return releaseDate;
+    }
+
+    public String getPop() {
+        return pop;
+    }
+
+    public Integer getId() {
+        return id;
     }
 }

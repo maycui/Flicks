@@ -76,7 +76,7 @@ public class MovieListActivity extends AppCompatActivity {
                 //load the results into movies list
                 try {
                     JSONArray results = response.getJSONArray("results");
-                    //itreate through the result set and create Movie objects
+                    //iterate through the result set and create Movie objects
                     for (int i = 0; i < results.length(); i++) {
                         Movie movie = new Movie(results.getJSONObject(i));
                         movies.add(movie);
